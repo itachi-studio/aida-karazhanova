@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/editorial" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
