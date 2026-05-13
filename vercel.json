@@ -1,7 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/editorial" }
-  ],
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/((?!@|src/|node_modules/|.*\\.).*)", "destination": "/index.html" }
+  ]
 }

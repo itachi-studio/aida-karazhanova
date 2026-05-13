@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+
+:root {
+  /* ── Diplomatic palette — pale ivory + UN blue + deep navy + gold ── */
+  --ink:        #0c1f3d;
+  --ink-soft:   #2a3a55;
+  --ink-mute:   #6b7990;
+  --ink-faint:  #94a3b8;
+  --paper:      #ffffff;
+  --bg:         #f4f1ea;
+  --bg-soft:    #ebe6db;
+  --accent:     #0a3878;
+  --accent-2:   #5b92e5;
+  --accent-soft:#0a387818;
+  --gold:       #c9a548;
+  --rule:       #c9cfdb;
+
+  --hair05:     #0c1f3d08;
+  --hair15:     #0c1f3d15;
+  --hair20:     #0c1f3d22;
+  --hair30:     #0c1f3d33;
+
+  --r:          8px;
+  --radius:     var(--r);
+}
+
+@theme inline {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Inter Tight', 'Inter', -apple-system, sans-serif;
+
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-ink:        var(--ink);
+  --color-ink-soft:   var(--ink-soft);
+  --color-ink-mute:   var(--ink-mute);
+  --color-ink-faint:  var(--ink-faint);
+  --color-paper:      var(--paper);
+  --color-bg:         var(--bg);
+  --color-bg-soft:    var(--bg-soft);
+  --color-accent:     var(--accent);
+  --color-accent-2:   var(--accent-2);
+  --color-accent-soft:var(--accent-soft);
+  --color-gold:       var(--gold);
+  --color-rule:       var(--rule);
+  --color-hair05:     var(--hair05);
+  --color-hair15:     var(--hair15);
+  --color-hair20:     var(--hair20);
+  --color-hair30:     var(--hair30);
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+@layer base {
+  html, body {
+    overflow-x: clip;
+  }
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    margin: 0;
+  }
+  * {
+    border-color: var(--hair20);
+  }
+  input, textarea, select {
+    font-size: max(16px, 1em);
+  }
+}
+
+.hair-b { border-bottom: 1px solid var(--hair20); }
+.hair-t { border-top: 1px solid var(--hair20); }
+.hair   { border: 1px solid var(--hair20); }
+
+.meta {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-mute);
+}
+.meta.on-dark { color: rgba(255, 255, 255, 0.6); }
+
+.eyebrow {
+  font-size: 11px;
+  font-style: italic;
+  color: var(--ink-mute);
+  font-weight: 400;
+  display: block;
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
+}
+
+/* italic-accent — единая фишка: одно слово в h1/h2 италиком + accent */
+.italic-accent {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+::selection {
+  background: rgba(91, 146, 229, 0.3);
+  color: var(--ink);
+}
